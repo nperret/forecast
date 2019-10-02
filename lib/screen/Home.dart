@@ -1,6 +1,6 @@
+import 'package:cpro_forecast/widget/BottomForecastBar.dart';
 import 'package:flutter/material.dart';
 import '../widget/HomeButton.dart';
-import '../widget/BottomAppButton.dart';
 
 
 class Home extends StatelessWidget {
@@ -9,15 +9,15 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-        body: Center(
-          child: Container(
+        body: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/weather.png"),
                 fit: BoxFit.cover,
               )
             ),
-            child:Column(
+            child:Center(
+              child : Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
@@ -40,24 +40,13 @@ class Home extends StatelessWidget {
                 ),
                 HomeButton(
                     title: 'History',
-                    pictureUrl: ''
+                    pictureUrl: 'assets/history-clock-button.svg'
                 ),
               ],
             ),
           )
         ),
-        bottomNavigationBar: BottomAppBar(
-          child: new Row(
-            children: <Widget>[
-              BottomAppButton(
-                  title: 'Weather'
-              ),
-              BottomAppButton(
-                  title: 'History'
-              ),
-            ],
-          ),
-        )
+        bottomNavigationBar: BottomForecastBar()
     );
   }
 }

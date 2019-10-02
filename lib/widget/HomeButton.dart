@@ -38,7 +38,7 @@ class HomeButton extends StatelessWidget {
                     color: const Color.fromRGBO(64, 68, 145, 1.0),
                     fontSize: 22,
                     fontWeight: FontWeight.w900,
-                    fontStyle: FontStyle.italic
+                    fontStyle: FontStyle.italic,
                     )
             ),
 
