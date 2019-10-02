@@ -26,7 +26,7 @@ class HomeButton extends StatelessWidget {
 
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             SvgPicture.asset(
               this.pictureUrl,
