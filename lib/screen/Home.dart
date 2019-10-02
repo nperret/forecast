@@ -36,11 +36,13 @@ class Home extends StatelessWidget {
 
                 HomeButton(
                     title: 'Weather Forecast',
-                    pictureUrl: 'assets/homeGlasses.svg'
+                    pictureUrl: 'assets/homeGlasses.svg',
+                    path: '/forecast'
                 ),
                 HomeButton(
                     title: 'History',
-                    pictureUrl: 'assets/history-clock-button.svg'
+                    pictureUrl: 'assets/history-clock-button.svg',
+                    path: '/history'
                 ),
               ],
             ),

@@ -4,17 +4,18 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeButton extends StatelessWidget {
 
-  HomeButton({Key key, this.title, this.pictureUrl}) : super(key: key);
+  HomeButton({Key key, this.title, this.pictureUrl, this.path}) : super(key: key);
 
   final String title;
   final String pictureUrl;
+  final String path;
 
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {print('You tap this GestureDetector component')},
+      onTap: () => {Navigator.pushNamed(context, this.path)},
       child: Container(
         width: 336,
         height: 160,

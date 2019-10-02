@@ -1,3 +1,5 @@
+import 'package:cpro_forecast/screen/Forecast.dart';
+import 'package:cpro_forecast/screen/History.dart';
 import 'package:flutter/material.dart';
 import 'screen/Home.dart';
 
@@ -11,7 +13,17 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Montserrat'
       ),
-      home: Home(),
+      routes: <String, WidgetBuilder>{
+        '/': (BuildContext context) {
+          return Home();
+        },
+        '/forecast': (BuildContext context){
+          return Forecast();
+        },
+        '/history': (BuildContext context){
+          return History();
+        }
+      },
     );
   }
 }

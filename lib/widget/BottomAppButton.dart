@@ -3,15 +3,18 @@ import 'package:flutter/material.dart';
 
 class BottomAppButton extends StatelessWidget {
 
-  BottomAppButton({Key key, this.title}) : super(key: key);
+  BottomAppButton({Key key, this.title, this.path}) : super(key: key);
 
   final String title;
+  final String path;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Expanded(
-        child: Container(
+        child: InkWell(
+          onTap: () => {Navigator.pushNamed(context, this.path)},
+          child: Container(
             child : Text(
               this.title,
               textAlign: TextAlign.center,
@@ -20,8 +23,10 @@ class BottomAppButton extends StatelessWidget {
                 color: Colors.grey,
                 fontWeight: FontWeight.bold,
               ),
-                ),
-    )
+            ),
+          )
+        )
+
     );
   }
 

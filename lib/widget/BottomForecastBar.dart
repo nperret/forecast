@@ -11,7 +11,8 @@ class BottomForecastBar extends StatelessWidget {
       child: new Row(
         children: <Widget>[
           BottomAppButton(
-              title: 'Weather'
+              title: 'Home',
+              path: '/'
           ),
           Container(
             height: 40,
@@ -20,7 +21,18 @@ class BottomForecastBar extends StatelessWidget {
             ),
           ),
           BottomAppButton(
-              title: 'History'
+              title: 'Weather',
+              path: '/forecast'
+          ),
+          Container(
+            height: 40,
+            child: VerticalDivider(
+              color: Colors.black,
+            ),
+          ),
+          BottomAppButton(
+              title: 'History',
+              path: '/history'
           ),
         ],
       ),
